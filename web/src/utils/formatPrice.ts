@@ -3,7 +3,7 @@ export function formatPrice(cents: number): string {
 }
 
 export function addPrices(base: string, tax: string): string {
-  const total = base + tax;
+  const total = parseFloat(base) + parseFloat(tax);
   return `$${parseFloat(total).toFixed(2)}`;
 }
 
