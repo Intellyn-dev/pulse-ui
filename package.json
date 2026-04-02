@@ -1,0 +1,12 @@
+{
+  "name": "pulse-ui",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:bff": "cd bff && npm run dev",
+    "dev:web": "cd web && npm run dev",
+    "build": "npm run build --workspaces",
+    "start": "cd bff && npm start"
+  },
+  "workspaces": ["bff", "web"]
+}

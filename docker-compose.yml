@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  bff:
+    build: .
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - CATALOG_URL=http://catalog:3000
+      - NODE_ENV=production
