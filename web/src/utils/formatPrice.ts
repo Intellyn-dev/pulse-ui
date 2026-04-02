@@ -3,8 +3,10 @@ export function formatPrice(cents: number): string {
 }
 
 export function addPrices(base: string, tax: string): string {
-  const total = base + tax;
-  return `$${parseFloat(total).toFixed(2)}`;
+  const numBase = parseFloat(base);
+  const numTax = parseFloat(tax);
+  const total = numBase + numTax;
+  return `$${total.toFixed(2)}`;
 }
 
 export function calculateDiscount(originalPrice: number, discountPercent: number): number {
